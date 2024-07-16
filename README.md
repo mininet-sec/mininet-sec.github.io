@@ -2,6 +2,12 @@
 
 This repo contains the webpage for the Mininet-Sec project.
 
+Please check the result here: [https://mininet-sec.github.io](https://mininet-sec.github.io).
+
+![Mininet-Sec big picture](/assets/img/mininet-sec-bigpic.png)
+
+---
+
 References for building the page:
 - Manual multilingual jekyll: https://matthewlincoln.net/2020/03/01/multilingual-jekyll.html
 - flag icons: https://github.com/lipis/flag-icons
@@ -16,7 +22,6 @@ There should be whitespace between paragraphs.
 
 There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
 
-![Mininet-Sec big picture](/assets/mininet-sec-bigpic.png)
 
 # Header 1
 
