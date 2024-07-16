@@ -1,0 +1,56 @@
+---
+---
+
+@import "{{ site.theme }}";
+.inner {
+  max-width: 1140px;
+}
+.banner:before {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.banner {
+  padding-top: 80px;
+  background-image: url("/assets/img/banner-img.png");
+  background-size: cover;
+  height: 100vh;
+}
+.padding-top-80 {
+  padding-top: 80px;
+}
+.no-box-shadow {
+  box-shadow: none;
+}
+.bg-black {
+  background-color:#000 !important;
+}
+.main-content {
+  p {
+    text-align: justify;
+  }
+}
+.fi {
+  position: relative;
+  display: inline-block;
+  width: 1.333333em;
+  line-height: 1em;
+}
+.fi:before {
+  content: " ";
+}
+.fi-br {
+  background-image: url(/assets/flags/4x3/br.svg);
+}
+.fi-us {
+  background-image: url(/assets/flags/4x3/us.svg);
+}
+img.centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.text-align-center {
+  text-align: center;
+}
+.text-align-right {
+  text-align: right;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,maximum-scale=2">
+    <link rel="icon" href="/assets/img/favicon.ico">
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/bootstrap.min.css">
+  </head>
+
+  <body>
+
+    <!-- Navbar (bootstrap) -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-black">
+     <div class="container">
+      <a class="navbar-brand" href="/"><img class="no-box-shadow" src="/assets/img/logo.png" alt="logo"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          {% for item in site.data.menu %}
+          <li class="nav-item{% if page.url == item.link[page.lang] %} active{% endif %}"><a class="nav-link" href="{{item.link[page.lang]}}">{{item.title[page.lang]}}</a></li>
+          {% endfor %}
+        </ul>
+        <span class="navbar-text">
+          <a href="/pt-br/"><span class="fi fi-br"></span></a>
+          <a href="/en/"><span class="fi fi-us"></span></a>
+        </span>
+      </div>
+     </div>
+    </nav>
+
+
+    <!-- Background image -->
+    <section id="banner" class="bg-black{% if page.url != '/' and page.url != '/pt-br/' and page.url != '/en/' %} d-none{% endif %}">
+      <div class="bg-image banner">
+        <div class="container d-flex align-items-center justify-content-center text-center h-100">
+          <div class="text-white" data-mdb-theme="dark">
+            <h1 id="project_title" class="mb-3">{{ site.title | default: site.github.repository_name }}</h1>
+            <h5 id="project_tagline" class="mb-4">{{ site.data.snippets.description[page.lang] | default: site.description }}</h2>
+            <a class="btn btn-outline-light btn-lg m-2" data-mdb-ripple-init href="https://www.youtube.com/watch?v=c9B4TPnak1A" role="button" rel="nofollow" target="_blank">Tutorial</a>
+            <a class="btn btn-outline-light btn-lg m-2" data-mdb-ripple-init href="https://github.com/mininet-sec/mininet-sec/" target="_blank" role="button">Download</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Background image -->
+
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer{% if page.url != '/' and page.url != '/pt-br/' and page.url != '/en/' %} padding-top-80{% endif %}">
+      <section id="main_content" class="inner main-content">
+        <!--
+        {% include navigation.html %}
+        -->
+        {{ content }}
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        {% if site.github.is_project_page %}
+        <p class="copyright">{{ site.title | default: site.github.repository_name }} maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
+        {% endif %}
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+    <script src="/assets/js/jquery-slim.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+  </body>
+</html>
